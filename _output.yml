@@ -20,3 +20,10 @@ bookdown::bs4_book:
     in_header: style/ga.html
   template: style/bs4_book.html
   css: style/style.css
+bookdown::pdf_book:
+  includes:
+    before_body: style/before_body.tex
+    after_body: style/after_body.tex
+    in_header: style/preamble.tex
+  latex_engine: xelatex
+  pandoc_args: --top-level-division=chapter
